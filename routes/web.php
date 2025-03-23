@@ -14,6 +14,11 @@ Route::get('Kevin', function () {
     return view('Kevin');
 });
 
+Route::get('Kevin', function () {
+    return view('Perla');
+});
+
+
 Auth::routes();
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
