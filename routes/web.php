@@ -17,7 +17,9 @@ Route::get('Kevin', function () {
 Route::get('Kevin', function () {
     return view('Perla');
 });
-
+Route::get('gustavo', function () {
+    return view('gustavo');
+});
 
 Auth::routes();
 
