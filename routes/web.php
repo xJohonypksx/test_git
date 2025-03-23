@@ -18,6 +18,10 @@ Route::get('Kevin', function () {
     return view('Perla');
 });
 
+Route::get('yair', function () {
+    return view('yair');
+});
+
 
 Auth::routes();
 
