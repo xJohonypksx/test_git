@@ -42,6 +42,10 @@ Route::get('silbana', function () {
     return view('silbana');
 });
 
+Route::get('Alan', function () {
+    return view('Alan');
+});
+
 Auth::routes();
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
