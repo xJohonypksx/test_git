@@ -35,6 +35,10 @@ Route::get('vista_irving', function () {
     return view('vista_irving');
 });
 
+Route::get('vista_pedro', function () {
+    return view('vista_pedro');
+});
+
 Auth::routes();
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
