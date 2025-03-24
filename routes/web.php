@@ -18,6 +18,9 @@ Route::get('Kevin', function () {
     return view('Perla');
 });
 
+Route::get('Natalia', function () {
+    return view('Natalia');
+});
 
 Route::get('yair', function () {
     return view('yair');
