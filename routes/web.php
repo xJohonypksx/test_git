@@ -41,6 +41,9 @@ Route::get('vista_pedro', function () {
 Route::get('silbana', function () {
     return view('silbana');
 });
+Route::get('misa', function () {
+    return view('misa');
+});
 
 Auth::routes();
 
