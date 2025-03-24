@@ -38,9 +38,11 @@ Route::get('vista_irving', function () {
 Route::get('vista_pedro', function () {
     return view('vista_pedro');
 });
+
 Route::get('silbana', function () {
     return view('silbana');
 });
+
 Route::get('misa', function () {
     return view('misa');
 });
