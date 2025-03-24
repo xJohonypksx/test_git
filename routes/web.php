@@ -31,6 +31,9 @@ Route::get('gustavo', function () {
     return view('gustavo');
 });
 
+Route::get('vista_irving', function () {
+    return view('vista_irving');
+});
 
 Auth::routes();
 
