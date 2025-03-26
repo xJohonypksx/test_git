@@ -2,17 +2,19 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\Dias;
+use App\Models\Dia;
 use Illuminate\Http\Request;
 
-class DiasController extends Controller
+class DiaController extends Controller
 {
     /**
      * Display a listing of the resource.
      */
     public function index()
     {
-        return view(view:'dia.index');//
+        $dias = Dia::all();
+        //dd($dias);
+        return view('dia.index',compact("dias"));//
     }
 
     /**
@@ -34,7 +36,7 @@ class DiasController extends Controller
     /**
      * Display the specified resource.
      */
-    public function show(Dias $dias)
+    public function show(Dia $dias)
     {
        return "HOLA DESDE SHOW"; //
     }
@@ -42,7 +44,7 @@ class DiasController extends Controller
     /**
      * Show the form for editing the specified resource.
      */
-    public function edit(Dias $dias)
+    public function edit(Dia $dias)
     {
         return "HOLA DESDE EDIT";//
     }
@@ -50,7 +52,7 @@ class DiasController extends Controller
     /**
      * Update the specified resource in storage.
      */
-    public function update(Request $request, Dias $dias)
+    public function update(Request $request, Dia $dias)
     {
         return "HOLA DESDE UPDATE";//
     }
@@ -58,7 +60,7 @@ class DiasController extends Controller
     /**
      * Remove the specified resource from storage.
      */
-    public function destroy(Dias $dias)
+    public function destroy(Dia $dias)
     {
         return "HOLA DESDE DESTROY";//
     }

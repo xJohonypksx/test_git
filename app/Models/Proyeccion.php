@@ -4,7 +4,7 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Model;
 
-class proyecciones extends Model
+class Proyeccion extends Model
 {
     //
 }
