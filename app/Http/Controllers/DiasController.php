@@ -12,7 +12,7 @@ class DiasController extends Controller
      */
     public function index()
     {
-        return view('Dias.index');//
+        return view(view:'dia.index');//
     }
 
     /**
