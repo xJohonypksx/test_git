@@ -53,11 +53,15 @@ Route::get('misa', function () {
 
 Route :: resource('clasificacion', App\Http\Controllers\ClasificacionController::class);
 
-Route::resource('horas', App\Http\Controllers\HorasController::class);
+Route::resource('horas', App\Http\Controllers\HoraController::class);
 
 Route::resource('Ciudad', App\Http\Controllers\CiudadController::class);
 
-Route::resource('proyecciones',Papp/Http/Controllers/ProyeccionController::class);
+<<<<<<< HEAD
+Route::resource('proyecciones',App/Http/Controllers/ProyeccionController::class);
+=======
+Route::resource('proyecciones',App\Http\Controllers\ProyeccionController::class);
+>>>>>>> 229138175a01ca1c53c4c37d6f98f8b71077d374
 
 Route::resource('idiomas',App\Http\Controllers\IdiomasController::class);
 
