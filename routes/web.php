@@ -50,7 +50,10 @@ Route::get('misa', function () {
     return view('misa');
 });
 
+
 Route::resource('Horas', App\Http\Controllers\HorasController::class);
+
+Route::resource('Ciudad', App\Http\Controllers\CiudadController::class);
 
 Auth::routes();
 
