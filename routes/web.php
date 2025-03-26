@@ -52,7 +52,7 @@ Route::get('misa', function () {
 
 Route :: resource('clasificacion', App\Http\Controllers\ClasificacionController::class);
 
-Route::resource('Horas', App\Http\Controllers\HorasController::class);
+Route::resource('Horas', App\Http\Controllers\HoraController::class);
 
 Route::resource('Ciudad', App\Http\Controllers\CiudadController::class);
 
