@@ -47,6 +47,8 @@ Route::get('misa', function () {
     return view('misa');
 });
 
+Route::resource('Horas', App\Http\Controllers\HorasController::class);
+
 Auth::routes();
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
