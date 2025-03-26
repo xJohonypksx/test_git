@@ -2,7 +2,7 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\Horas;
+use App\Models\Hora;
 use Illuminate\Http\Request;
 
 class HoraController extends Controller
@@ -12,7 +12,7 @@ class HoraController extends Controller
      */
     public function index()
     {
-        return view('horas.index');
+        return view('hora.index');
         //
     }
 
@@ -35,7 +35,7 @@ class HoraController extends Controller
     /**
      * Display the specified resource.
      */
-    public function show(Horas $horas)
+    public function show(Hora $horas)
     {
         return "Hola desde show";//
     }
@@ -43,7 +43,7 @@ class HoraController extends Controller
     /**
      * Show the form for editing the specified resource.
      */
-    public function edit(Horas $horas)
+    public function edit(Hora $horas)
     {
         return "Hola desde edit";//
     }
@@ -51,7 +51,7 @@ class HoraController extends Controller
     /**
      * Update the specified resource in storage.
      */
-    public function update(Request $request, Horas $horas)
+    public function update(Request $request, Hora $horas)
     {
         return "Hola desde update";//
     }
@@ -59,7 +59,7 @@ class HoraController extends Controller
     /**
      * Remove the specified resource from storage.
      */
-    public function destroy(Horas $horas)
+    public function destroy(Hora $horas)
     {
         return "Hola desde destroy";//
     }
