@@ -14,7 +14,7 @@ Route::get('Kevin', function () {
     return view('Kevin');
 });
 
-Route::get('Kevin', function () {
+Route::get('Perla', function () {
     return view('Perla');
 });
 
@@ -50,8 +50,7 @@ Route::get('misa', function () {
     return view('misa');
 });
 
-
-
+Route :: resource('clasificacion', App\Http\Controllers\ClasificacionController::class);
 
 Route::resource('Horas', App\Http\Controllers\HorasController::class);
 
@@ -60,6 +59,7 @@ Route::resource('Ciudad', App\Http\Controllers\CiudadController::class);
 Route::resource('proyecciones',App\Http\Controllers\ProyeccionesController::class);
 
 Route::resource('idiomas',App\Http\Controllers\IdiomasController::class);
+
 
 Auth::routes();
 
