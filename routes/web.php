@@ -57,7 +57,7 @@ Route::resource('horas', App\Http\Controllers\HorasController::class);
 
 Route::resource('Ciudad', App\Http\Controllers\CiudadController::class);
 
-Route::resource('proyecciones',App\Http\Controllers\ProyeccionesController::class);
+Route::resource('proyecciones',Papp/Http/Controllers/ProyeccionController::class);
 
 Route::resource('idiomas',App\Http\Controllers\IdiomasController::class);
 
