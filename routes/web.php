@@ -26,7 +26,6 @@ Route::get('yair', function () {
     return view('yair');
 });
 
-
 Route::get('gustavo', function () {
     return view('gustavo');
 });
@@ -43,13 +42,12 @@ Route::get('silbana', function () {
     return view('silbana');
 });
 
-<<<<<<< HEAD
 Route::get('Alan', function () {
     return view('Alan');
-=======
+});
+
 Route::get('misa', function () {
     return view('misa');
->>>>>>> 2b84c1183dde7620dcb6243da04557423f34dd1a
 });
 
 Route::resource('Horas', App\Http\Controllers\HorasController::class);
