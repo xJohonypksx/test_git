@@ -7,5 +7,6 @@
 <h1 class="alert alert-info">LIZBETH FABILA GUADARRAMA</h1>
 <h1 class="alert alert-info">PERLA GARDUÑO DE JESUS</h1>
 <h1 class="alert alert-info">NATALIA GUADARRAMA CAMBRON</h1>
+<h1 class="alert alert-info">Pedro Guillermo Garcia</h1>
 
 @endsection
