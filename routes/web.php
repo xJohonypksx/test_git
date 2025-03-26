@@ -27,6 +27,7 @@ Route::get('yair', function () {
 Route::get('gustavo', function () {
     return view('gustavo');
 });
+Route::resource('generos',App\Http\Controllers\HomeController::class);
 
 
 Auth::routes();
