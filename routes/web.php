@@ -51,12 +51,18 @@ Route::get('misa', function () {
 });
 
 
+
+
 Route::resource('Horas', App\Http\Controllers\HorasController::class);
 
 Route::resource('Ciudad', App\Http\Controllers\CiudadController::class);
 
 Route::resource('proyecciones',App\Http\Controllers\ProyeccionesController::class);
 
+Route::resource('idiomas',App\Http\Controllers\IdiomasController::class);
+
 Auth::routes();
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+
+
