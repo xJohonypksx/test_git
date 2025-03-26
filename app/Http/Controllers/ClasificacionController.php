@@ -2,17 +2,17 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\Ciudad;
+use App\Models\Clasificacion;
 use Illuminate\Http\Request;
 
-class CiudadController extends Controller
+class ClasificacionController extends Controller
 {
     /**
      * Display a listing of the resource.
      */
     public function index()
     {
-        return view('ciudad.index');//
+        return view('clasificaciones.index');
     }
 
     /**
@@ -20,7 +20,7 @@ class CiudadController extends Controller
      */
     public function create()
     {
-        return "Hola desde create";//
+        return"HOLA DESDE CREATE";//
     }
 
     /**
@@ -28,38 +28,38 @@ class CiudadController extends Controller
      */
     public function store(Request $request)
     {
-        return "Hola desde store";//
+       return "HOLA DESDE STORE"; //
     }
 
     /**
      * Display the specified resource.
      */
-    public function show(Ciudad $ciudad)
+    public function show(Clasificacion $clasificacion)
     {
-        return "Hola desde show";//
+        return "HOLA DESDE SHOW";//
     }
 
     /**
      * Show the form for editing the specified resource.
      */
-    public function edit(Ciudad $ciudad)
+    public function edit(Clasificacion $clasificacion)
     {
-        return "Hola desde edit";//
+       return "HOLA DESDE EDIT"; //
     }
 
     /**
      * Update the specified resource in storage.
      */
-    public function update(Request $request, Ciudad $ciudad)
+    public function update(Request $request, Clasificacion $clasificacion)
     {
-        return "Hola desde update";//
+       return "HOLA DESDE UPDATE"; //
     }
 
     /**
      * Remove the specified resource from storage.
      */
-    public function destroy(Ciudad $ciudad)
+    public function destroy(Clasificacion $clasificacion)
     {
-        return "Hola desde destroy";//
+        return "HOLA DESDE DESTROY";//
     }
 }

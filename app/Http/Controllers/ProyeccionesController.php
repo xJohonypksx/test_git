@@ -2,17 +2,17 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\Ciudad;
+use App\Models\proyecciones;
 use Illuminate\Http\Request;
 
-class CiudadController extends Controller
+class ProyeccionesController extends Controller
 {
     /**
      * Display a listing of the resource.
      */
     public function index()
     {
-        return view('ciudad.index');//
+        return view('proyecciones.index');//
     }
 
     /**
@@ -20,7 +20,7 @@ class CiudadController extends Controller
      */
     public function create()
     {
-        return "Hola desde create";//
+        //
     }
 
     /**
@@ -28,38 +28,39 @@ class CiudadController extends Controller
      */
     public function store(Request $request)
     {
-        return "Hola desde store";//
+        //
     }
 
     /**
      * Display the specified resource.
      */
-    public function show(Ciudad $ciudad)
+    public function show(proyecciones $proyecciones)
     {
-        return "Hola desde show";//
+        //
     }
 
     /**
      * Show the form for editing the specified resource.
      */
-    public function edit(Ciudad $ciudad)
+    public function edit(proyecciones $proyecciones)
     {
-        return "Hola desde edit";//
+        //
     }
 
     /**
      * Update the specified resource in storage.
      */
-    public function update(Request $request, Ciudad $ciudad)
+    public function update(Request $request, proyecciones $proyecciones)
     {
-        return "Hola desde update";//
+        //
     }
 
     /**
      * Remove the specified resource from storage.
      */
-    public function destroy(Ciudad $ciudad)
+    public function destroy(proyecciones $proyecciones)
     {
-        return "Hola desde destroy";//
+        //
     }
 }
+

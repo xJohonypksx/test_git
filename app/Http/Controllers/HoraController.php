@@ -2,17 +2,18 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\Ciudad;
+use App\Models\Hora;
 use Illuminate\Http\Request;
 
-class CiudadController extends Controller
+class HoraController extends Controller
 {
     /**
      * Display a listing of the resource.
      */
     public function index()
     {
-        return view('ciudad.index');//
+        return view('hora.index');
+        //
     }
 
     /**
@@ -34,7 +35,7 @@ class CiudadController extends Controller
     /**
      * Display the specified resource.
      */
-    public function show(Ciudad $ciudad)
+    public function show(Hora $horas)
     {
         return "Hola desde show";//
     }
@@ -42,7 +43,7 @@ class CiudadController extends Controller
     /**
      * Show the form for editing the specified resource.
      */
-    public function edit(Ciudad $ciudad)
+    public function edit(Hora $horas)
     {
         return "Hola desde edit";//
     }
@@ -50,7 +51,7 @@ class CiudadController extends Controller
     /**
      * Update the specified resource in storage.
      */
-    public function update(Request $request, Ciudad $ciudad)
+    public function update(Request $request, Hora $horas)
     {
         return "Hola desde update";//
     }
@@ -58,7 +59,7 @@ class CiudadController extends Controller
     /**
      * Remove the specified resource from storage.
      */
-    public function destroy(Ciudad $ciudad)
+    public function destroy(Hora $horas)
     {
         return "Hola desde destroy";//
     }
