@@ -1,4 +1,5 @@
 @extends("layouts.app")
+
 @section("content")
     <div class="row justify-content-center vh-100 align-items-center bg-light">
         <div class="col-md-8">
@@ -23,14 +24,12 @@
                             <th scope="row">1</th>
                             <td>Nombre Queretaro</td>
                         </tr>
-                        <tr>
-                            <th scope="row">2</th>
-                            <td>Nombre Guadalajara</td>
-                        </tr>
-                        <tr>
-                            <th scope="row">3</th>
-                            <td>Nombre Monterrey</td>
-                        </tr>
+                        @foreach($ciudades as $index => $ciudad)
+                            <tr>
+                                <th scope="row">{{ $index + 2 }}</th>
+                                <td>{{ $ciudad->nombre }}</td>
+                            </tr>
+                        @endforeach
                         </tbody>
                     </table>
                 </div>
@@ -42,4 +41,5 @@
         </div>
     </div>
 @endsection
+
 
