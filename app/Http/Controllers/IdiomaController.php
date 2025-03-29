@@ -5,14 +5,16 @@ namespace App\Http\Controllers;
 use App\Models\Idiomas;
 use Illuminate\Http\Request;
 
-class IdiomasController extends Controller
+class IdiomaController extends Controller
 {
     /**
      * Display a listing of the resource.
      */
     public function index()
     {
-        return view(view:'idiomas.index');//
+        return view('Idioma.index');
+
+
     }
 
     /**
