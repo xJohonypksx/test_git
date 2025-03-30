@@ -58,8 +58,6 @@ Route::resource('horas', App\Http\Controllers\HoraController::class);
 Route::resource('Ciudad', App\Http\Controllers\CiudadController::class);
 
 
-
-
 Route::resource('proyecciones',App\Http\Controllers\ProyeccionController::class);
 
 
