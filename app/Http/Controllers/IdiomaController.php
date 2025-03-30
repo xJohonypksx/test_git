@@ -36,7 +36,7 @@ class IdiomaController extends Controller
     /**
      * Display the specified resource.
      */
-    public function show(Idiomas $idiomas)
+    public function show(Idioma $idiomas)
     {
         return"HOLA DESDE SHOW";//
     }
@@ -44,7 +44,7 @@ class IdiomaController extends Controller
     /**
      * Show the form for editing the specified resource.
      */
-    public function edit(Idiomas $idiomas)
+    public function edit(Idioma $idiomas)
     {
         return"HOLA DESDE EDIT";//
     }
@@ -52,7 +52,7 @@ class IdiomaController extends Controller
     /**
      * Update the specified resource in storage.
      */
-    public function update(Request $request, Idiomas $idiomas)
+    public function update(Request $request, Idioma $idiomas)
     {
        return"HOLA DESDE UPDATE"; //
     }
@@ -60,7 +60,7 @@ class IdiomaController extends Controller
     /**
      * Remove the specified resource from storage.
      */
-    public function destroy(Idiomas $idiomas)
+    public function destroy(Idioma $idiomas)
     {
         return"HOLA DESDE DESTROY";//
     }
