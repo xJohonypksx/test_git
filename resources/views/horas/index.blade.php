@@ -23,6 +23,13 @@
                         </tr>
                         </thead>
                         <tbody class="text-center">
+                        @foreach($horas as $hora)
+                            <tr>
+                                <td>{{$Loop->index+1}}</td>
+                                <td>{{$hora->descripcion_h}}</td>
+                            </tr>
+
+                        @endforeach
                         <tr>
                             <th scope="row">1</th>
                             <td>1</td>
