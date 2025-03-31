@@ -2,7 +2,12 @@
 
 namespace App\Http\Controllers;
 
+<<<<<<< Updated upstream
 use App\Models\Idioma;
+=======
+
+use App\Models\Idiomas;
+>>>>>>> Stashed changes
 use Illuminate\Http\Request;
 
 class IdiomaController extends Controller
@@ -12,10 +17,14 @@ class IdiomaController extends Controller
      */
     public function index()
     {
+<<<<<<< Updated upstream
         $idiomas = Idioma::all();
         return view('idioma.index', compact('idiomas'));
         //dd($idiomas);
+=======
+>>>>>>> Stashed changes
 
+        return view('Idioma.index');
 
     }
 
@@ -67,3 +76,8 @@ class IdiomaController extends Controller
         return"HOLA DESDE DESTROY";//
     }
 }
+
+
+
+
+
