@@ -2,7 +2,7 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\Idiomas;
+use App\Models\Idioma;
 use Illuminate\Http\Request;
 
 class IdiomaController extends Controller
@@ -12,7 +12,9 @@ class IdiomaController extends Controller
      */
     public function index()
     {
-        return view('Idioma.index');
+        $idiomas = Idioma::all();
+        return view('idioma.index', compact('idiomas'));
+        //dd($idiomas);
 
 
     }
