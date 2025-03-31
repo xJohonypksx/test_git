@@ -25,7 +25,7 @@
 <body>
 <div class="container mt-5">
     <h1 class="alert alert-primary text-center">Clasificaciones</h1>
-    
+
     <div class="row header">
         <div class="col">Id_Clasificacion</div>
         <div class="col">nom_clasificacion</div>
