@@ -58,12 +58,10 @@ Route::resource('horas', App\Http\Controllers\HoraController::class);
 Route::resource('Ciudad', App\Http\Controllers\CiudadController::class);
 
 
-
-
 Route::resource('proyecciones',App\Http\Controllers\ProyeccionController::class);
 
 
-Route::resource('idiomas',App\Http\Controllers\IdiomasController::class);
+Route::resource('idiomas',App\Http\Controllers\IdiomaController::class);
 
 Route::resource('dias',App\Http\Controllers\DiaController::class);
 

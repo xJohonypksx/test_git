@@ -12,7 +12,9 @@ class ClasificacionController extends Controller
      */
     public function index()
     {
-        return view('clasificaciones.index');
+        $clasificaciones = Clasificacion::all();
+        return view('clasificacion.index', compact('clasificaciones'));
+
     }
 
     /**

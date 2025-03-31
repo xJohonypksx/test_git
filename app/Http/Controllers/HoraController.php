@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Hora;
 use App\Models\Horas;
 use Illuminate\Http\Request;
 
@@ -12,7 +13,10 @@ class HoraController extends Controller
      */
     public function index()
     {
-        return view('horas.index');
+        $horas = Hora::all();
+        //dd($horas);
+
+        return view('horas.index',data:compact(""));
         //
     }
 

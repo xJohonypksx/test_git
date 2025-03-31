@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Ciudad;
 use Illuminate\Http\Request;
+use function Sodium\add;
 
 class CiudadController extends Controller
 {
@@ -12,7 +13,9 @@ class CiudadController extends Controller
      */
     public function index()
     {
-        return view('ciudad.index');//
+        $ciudades = Ciudad::all();
+        //add($ciudades);
+        return view('ciudad.index',compact("ciudades"));//
     }
 
     /**

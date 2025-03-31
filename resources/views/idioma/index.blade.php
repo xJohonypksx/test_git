@@ -15,14 +15,14 @@
                     </tr>
                     </thead>
                     <tbody>
+                    @foreach($idiomas as $idioma)
                     <tr>
-                        <td>1</td>
-                        <td>Español</td>
+
+                        <td>{{$idioma->id_idioma}}</td>
+                        <td>{{$idioma->desc_idioma}}</td>
+
                     </tr>
-                    <tr>
-                        <td>2</td>
-                        <td>Inglés</td>
-                    </tr>
+                    @endforeach
                     </tbody>
                 </table>
             </div>
