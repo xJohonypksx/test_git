@@ -50,6 +50,9 @@ Route::get('Alan', function () {
 Route::get('misa', function () {
     return view('misa');
 });
+Route::get('Christopher', function (){
+    return view('Christopher');
+});
 
 Route :: resource('clasificacion', App\Http\Controllers\ClasificacionController::class);
 
