@@ -18,8 +18,8 @@ Route::get('Perla', function () {
     return view('Perla');
 });
 
-Route::get('Natalia', function () {
-    return view('Natalia');
+Route::get('natalia', function () {
+    return view('natalia');
 });
 
 Route::get('yair', function () {
