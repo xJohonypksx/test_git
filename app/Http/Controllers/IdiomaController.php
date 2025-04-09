@@ -5,7 +5,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Idioma;
 
-use App\Models\Idiomas;
+
 
 use Illuminate\Http\Request;
 
@@ -22,7 +22,6 @@ class IdiomaController extends Controller
         //dd($idiomas);
 
 
-        return view('Idioma.index');
 
     }
 
