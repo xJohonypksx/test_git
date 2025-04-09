@@ -6,6 +6,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Clasificaciones</title>
+    <a href="{{url("clasificacion/create")}}" class="btn btn-success text-aling-center">Agregar</a>
     <style>
         .row {
             display: flex;
@@ -33,7 +34,7 @@
     @foreach($clasificaciones as $clasificacion)
     <div class="row">
         <div class="col">{{ $clasificacion->id }}</div>
-        <div class="col">{{$clasificacion->nom_clasificacion}}</div>
+        <div class="col">{{$clasificacion->nombre}}</div>
     </div>
     @endforeach
 

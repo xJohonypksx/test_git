@@ -22,7 +22,7 @@ class ClasificacionController extends Controller
      */
     public function create()
     {
-        return"HOLA DESDE CREATE";//
+        return view('clasificacion.create');
     }
 
     /**
@@ -30,7 +30,13 @@ class ClasificacionController extends Controller
      */
     public function store(Request $request)
     {
-       return "HOLA DESDE STORE"; //
+        Clasificacion::create([
+            "nombre"=>$request->nombre,
+
+
+
+        ]);
+        return redirect()->route('clasificacion.index');//
     }
 
     /**
