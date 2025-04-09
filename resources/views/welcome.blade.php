@@ -25,7 +25,7 @@
 
         /* Fondo que ocupa toda la pantalla */
         body {
-            background: url("img/fondo.png") no-repeat center center fixed;
+            background: url("img/fondo.jpg") no-repeat center center fixed;
             background-size: cover;
             display: flex;
             justify-content: center;
