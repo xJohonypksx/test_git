@@ -54,6 +54,8 @@ Route::get('Christopher', function (){
     return view('Christopher');
 });
 
+
+
 Route :: resource('clasificacion', App\Http\Controllers\ClasificacionController::class);
 
 Route::resource('horas', App\Http\Controllers\HoraController::class);
