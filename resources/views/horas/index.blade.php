@@ -3,7 +3,9 @@
 @section("content")
     <div class="row justify-content-center my-5">
         <div class="col-md-7 text-center">
-            <h1 class="alert alert-primary fw-bold">HORAS</h1>
+            <h1 class="alert alert-primary fw-bold">HORAS
+            <a href="{{url("horas/create")}}" class="btn btn-success text-aling-center ">Agregar</a>
+            </h1>
         </div>
     </div>
 

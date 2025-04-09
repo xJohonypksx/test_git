@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Dia;
 use App\Models\Hora;
 use App\Models\Horas;
 use Illuminate\Http\Request;
@@ -25,7 +26,7 @@ class HoraController extends Controller
      */
     public function create()
     {
-        return "Hola desde create";//
+        return view('hora.create');
     }
 
     /**
@@ -33,8 +34,11 @@ class HoraController extends Controller
      */
     public function store(Request $request)
     {
-        return "Hola desde store";//
-    }
+        Hora::create([
+            "descripcion_h"=>$request->descripcion_h,
+
+        ]);
+        return redirect()->route('horas.index');    }
 
     /**
      * Display the specified resource.
