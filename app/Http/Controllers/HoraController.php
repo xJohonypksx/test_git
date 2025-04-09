@@ -4,7 +4,6 @@ namespace App\Http\Controllers;
 
 use App\Models\Dia;
 use App\Models\Hora;
-use App\Models\Horas;
 use Illuminate\Http\Request;
 
 class HoraController extends Controller
@@ -17,7 +16,7 @@ class HoraController extends Controller
         $horas = Hora::all();
         //dd($horas);
 
-        return view('horas.index',data:compact(""));
+        return view('horas.index',data:compact("horas"));
         //
     }
 
@@ -26,7 +25,7 @@ class HoraController extends Controller
      */
     public function create()
     {
-        return view('hora.create');
+        return view('horas.create');
     }
 
     /**

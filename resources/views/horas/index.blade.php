@@ -19,7 +19,6 @@
                     <table class="table table-striped table-hover">
                         <thead class="table-dark text-center">
                         <tr>
-                            <th scope="col">#</th>
                             <th scope="col">ID</th>
                             <th scope="col">Descripción</th>
                         </tr>
@@ -27,16 +26,11 @@
                         <tbody class="text-center">
                         @foreach($horas as $hora)
                             <tr>
-                                <td>{{$Loop->index+1}}</td>
+                                <td>{{$loop->index+1}}</td>
                                 <td>{{$hora->descripcion_h}}</td>
                             </tr>
 
                         @endforeach
-                        <tr>
-                            <th scope="row">1</th>
-                            <td>1</td>
-                            <td>Descripción Hora</td>
-                        </tr>
                         </tbody>
                     </table>
                 </div>
