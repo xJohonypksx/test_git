@@ -7,7 +7,7 @@
     <title>Proyecto 401</title>
 
     <!-- Fuente -->
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+    <link href="img/fondo.png" rel="stylesheet">
 
     <style>
         * {
