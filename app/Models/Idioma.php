@@ -8,14 +8,11 @@ use Illuminate\Database\Eloquent\Model;
 
 class Idioma extends Model
 {
-    use HasFactory;
 
     protected $table = 'idiomas';
 
     protected $primaryKey = 'id_idioma';
 
-    public $timestamps = false;
-
-    protected $fillable = ['id_idioma', 'desc_idioma'];
+    protected $fillable = ["desc_idioma"];
 }
 

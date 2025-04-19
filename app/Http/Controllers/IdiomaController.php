@@ -27,7 +27,7 @@ class IdiomaController extends Controller
      */
     public function create()
     {
-        return"HOLA DESDE CREATE";//
+        return view('idioma.create');//
     }
 
     /**
@@ -35,7 +35,10 @@ class IdiomaController extends Controller
      */
     public function store(Request $request)
     {
-        return"HOLA DESDE REQUEST";//
+        Idioma::create([
+            "desc_idioma"=>$request->desc_idioma,
+        ]);
+        return redirect()->route('idioma.index');
     }
 
     /**

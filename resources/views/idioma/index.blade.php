@@ -1,6 +1,8 @@
 @extends("layouts.app")
 @section("content")
-    <h1 class="alert alert-success text-center">Listado de Idiomas</h1>
+    <h1 class="alert alert-success text-center">Listado de Idiomas
+        <a href="{{url("idiomas/create")}}" class="btn btn-success " style="float: left";>Agregar</a>
+    </h1>
     <div class="container mt-4">
         <div class="card">
             <div class="card-header bg-primary text-white">
@@ -26,6 +28,10 @@
                     </tbody>
                 </table>
             </div>
+            <div class="card-footer bg-secondary text-white text-center">
+                <small>Listado de Idiomas - Laravel</small>
+            </div>
+
         </div>
     </div>
 @endsection
