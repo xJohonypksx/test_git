@@ -10,6 +10,6 @@ class Clasificacion extends Model
     use HasFactory;
 
     protected $table = 'clasificacion';//nombre de la tabla
-    protected $fillable = ['nom_clasificacion'];//columna que se puede llenar
+    protected $fillable = ['nombre'];//columna que se puede llenar
     public $timestamps = false;
 }

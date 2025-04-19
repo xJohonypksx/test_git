@@ -3,7 +3,9 @@
 @section("content")
     <div class="row justify-content-center my-5">
         <div class="col-md-7 text-center">
-            <h1 class="alert alert-primary fw-bold">HORAS</h1>
+            <h1 class="alert alert-primary fw-bold">HORAS
+            <a href="{{url("horas/create")}}" class="btn btn-success text-aling-center ">Agregar</a>
+            </h1>
         </div>
     </div>
 
@@ -17,7 +19,6 @@
                     <table class="table table-striped table-hover">
                         <thead class="table-dark text-center">
                         <tr>
-                            <th scope="col">#</th>
                             <th scope="col">ID</th>
                             <th scope="col">Descripción</th>
                         </tr>
@@ -25,16 +26,11 @@
                         <tbody class="text-center">
                         @foreach($horas as $hora)
                             <tr>
-                                <td>{{$Loop->index+1}}</td>
+                                <td>{{$loop->index+1}}</td>
                                 <td>{{$hora->descripcion_h}}</td>
                             </tr>
 
                         @endforeach
-                        <tr>
-                            <th scope="row">1</th>
-                            <td>1</td>
-                            <td>Descripción Hora</td>
-                        </tr>
                         </tbody>
                     </table>
                 </div>

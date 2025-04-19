@@ -23,7 +23,7 @@ class CiudadController extends Controller
      */
     public function create()
     {
-        return "Hola desde create";//
+        return view('ciudad.create');
     }
 
     /**
@@ -31,7 +31,11 @@ class CiudadController extends Controller
      */
     public function store(Request $request)
     {
-        return "Hola desde store";//
+        Ciudad::create([
+            "nombre"=>$request->nombre,
+        ]);
+
+        return redirect()->route('ciudades.index');
     }
 
     /**

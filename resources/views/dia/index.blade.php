@@ -1,7 +1,9 @@
 @extends("layouts.app")
 @section("content")
 
-<h1 class="alert alert-info">Dias</h1>
+<h1 class="alert alert-info">Dias
+<a href="{{url("dias/create")}}" class="btn btn-success text-aling-center ">Agregar</a>
+</h1>
 <table class="table table-bordered border-primary">
     <thead>
         <tr>
@@ -10,6 +12,7 @@
         </tr>
     </thead>
     <tbody>
+
     @foreach($dias as $dia)
         <tr>
             <td>{{$loop->index+1}}</td>

@@ -22,7 +22,9 @@ class DiaController extends Controller
      */
     public function create()
     {
-        return "HOLA DESDE CREATE";//
+
+        return view('dia.create');
+
     }
 
     /**
@@ -30,7 +32,11 @@ class DiaController extends Controller
      */
     public function store(Request $request)
     {
-        return "HOLA DESDE STORE";//
+        Dia::create([
+            "descripcion_dia"=>$request->descripcion_dia,
+
+        ]);
+        return redirect()->route('dias.index');//
     }
 
     /**

@@ -5,8 +5,6 @@ namespace App\Http\Controllers;
 
 use App\Models\Idioma;
 
-
-
 use Illuminate\Http\Request;
 
 class IdiomaController extends Controller
@@ -20,7 +18,6 @@ class IdiomaController extends Controller
         $idiomas = Idioma::all();
         return view('idioma.index', compact('idiomas'));
         //dd($idiomas);
-
 
 
     }

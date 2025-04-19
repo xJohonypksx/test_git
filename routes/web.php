@@ -54,17 +54,22 @@ Route::get('Christopher', function (){
     return view('Christopher');
 });
 
+
+
 Route :: resource('clasificacion', App\Http\Controllers\ClasificacionController::class);
+
 
 Route::resource('horas', App\Http\Controllers\HoraController::class);
 
-Route::resource('Ciudad', App\Http\Controllers\CiudadController::class);
+
+Route::resource('ciudades', App\Http\Controllers\CiudadController::class);
 
 
 Route::resource('proyecciones',App\Http\Controllers\ProyeccionController::class);
 
 
 Route::resource('idiomas',App\Http\Controllers\IdiomaController::class);
+
 
 Route::resource('dias',App\Http\Controllers\DiaController::class);
 
