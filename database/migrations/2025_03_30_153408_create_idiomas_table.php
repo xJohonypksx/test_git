@@ -6,21 +6,16 @@ use Illuminate\Support\Facades\Schema;
 
 return new class extends Migration
 {
-    /**
-     * Run the migrations.
-     */
-    public function up(): void
+    public function up()
     {
         Schema::create('idiomas', function (Blueprint $table) {
-            $table->id();
+            $table->increments('id_idioma'); // Aquí se define como auto_increment
+            $table->string('desc_idioma')->unique();
             $table->timestamps();
         });
     }
 
-    /**
-     * Reverse the migrations.
-     */
-    public function down(): void
+    public function down()
     {
         Schema::dropIfExists('idiomas');
     }
