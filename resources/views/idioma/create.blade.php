@@ -13,15 +13,15 @@
                             @csrf
 
                             <div class="mb-3">
-                                <label for="nombre" class="form-label">Nuevo Idioma</label>
+                                <label for="desc_idioma" class="form-label">Nuevo Idioma</label>
                                 <input
                                     type="text"
-                                    class="form-control @error('nombre') is-invalid @enderror"
-                                    name="nombre"
-                                    id="nombre"
+                                    class="form-control @error('desc_idioma') is-invalid @enderror"
+                                    name="desc_idioma"
+                                    id="desc_idioma"
                                     placeholder="Ej. Español"
                                 >
-                                @error('nombre')
+                                @error('desc_idioma')
                                 <div class="invalid-feedback">
                                     {{ $message }}
                                 </div>
