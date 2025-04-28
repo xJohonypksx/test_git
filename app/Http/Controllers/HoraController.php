@@ -50,24 +50,29 @@ class HoraController extends Controller
     /**
      * Show the form for editing the specified resource.
      */
-    public function edit(Horas $horas)
+    public function edit(Hora $hora)
     {
-        return "Hola desde edit";//
+        //dd($hora);
+        return view('horas.edit',compact("hora"));
     }
 
     /**
      * Update the specified resource in storage.
      */
-    public function update(Request $request, Horas $horas)
+    public function update(Request $request, Hora $hora)
     {
-        return "Hola desde update";//
+        //dd($hora);
+        $hora->update($request->all());
+        return redirect()->route('horas.index');
     }
 
     /**
      * Remove the specified resource from storage.
      */
-    public function destroy(Horas $horas)
+    public function destroy(Hora $hora)
     {
-        return "Hola desde destroy";//
+        //dd($hora);
+        $hora->delete();
+        return redirect()->route('horas.index');
     }
 }

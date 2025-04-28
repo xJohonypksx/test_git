@@ -21,6 +21,7 @@
                         <tr>
                             <th scope="col">ID</th>
                             <th scope="col">Descripción</th>
+                            <th scope="col">Acciones</th>
                         </tr>
                         </thead>
                         <tbody class="text-center">
@@ -28,6 +29,14 @@
                             <tr>
                                 <td>{{$loop->index+1}}</td>
                                 <td>{{$hora->descripcion_h}}</td>
+                                <td>
+                                    <form action="{{route("horas.destroy",$hora->id_hora)}}" method="post">
+                                        @csrf
+                                        @method("DELETE")
+                                        <button type="submit" class="btn btn-danger">Eliminar</button>
+                                    </form>
+                                    <a class="btn btn-primary" href="{{route("horas.edit",$hora->id_hora)}}">Editar</a>
+                                </td>
                             </tr>
 
                         @endforeach
