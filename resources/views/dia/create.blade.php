@@ -1,5 +1,6 @@
 @extends("layouts.app")
 @section("content")
+    <div class="center-form-container">
     <form class="row g-3" method="post" action="{{route("dias.store")}}">
         @csrf
 
@@ -11,6 +12,6 @@
             <button type="submit" class="btn btn-primary mb-3">Guardar</button>
         </div>
     </form>
-
+    </div>
 @endsection
 

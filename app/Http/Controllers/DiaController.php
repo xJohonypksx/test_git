@@ -52,7 +52,7 @@ class DiaController extends Controller
      */
     public function edit(Dia $dias)
     {
-        return "HOLA DESDE EDIT";//
+        return view ('dia.edit',compact("dias"));
     }
 
     /**
@@ -60,7 +60,8 @@ class DiaController extends Controller
      */
     public function update(Request $request, Dia $dias)
     {
-        return "HOLA DESDE UPDATE";//
+        $dias->update($request->all());
+        return redirect()->route('dias.index');
     }
 
     /**
@@ -68,6 +69,7 @@ class DiaController extends Controller
      */
     public function destroy(Dia $dias)
     {
-        return "HOLA DESDE DESTROY";//
+        $dias->delete();
+        return redirect()->route('dias.index');
     }
 }

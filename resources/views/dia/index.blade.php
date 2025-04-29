@@ -17,6 +17,14 @@
         <tr>
             <td>{{$loop->index+1}}</td>
             <td>{{$dia->descripcion_dia}}</td>
+            <td>
+                <form action="{{route("dia.destroy",$dias->id_dia)}}" method="post">
+                    @csrf
+                    @method("DELETE")
+                    <button type="submit" class="btn btn-danger">Eliminar</button>
+                </form>
+                <a class="btn btn-primary" href="{{route("dia.edit",$dias->id_dia)}}">Editar</a>
+            </td>
         </tr>
     @endforeach
 
