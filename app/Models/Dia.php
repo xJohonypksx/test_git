@@ -3,13 +3,14 @@
 namespace App\Models;
 
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Database\Eloquent\SoftDeletes;
 
 class Dia extends Model
 {
-    use softDeletes;
+    use SoftDeletes;
 
     protected $table = 'dias';
     protected $primaryKey = 'id_dia';
-    protected $fillable = ["descripcion_dia"];
-    //
+    protected $fillable = ['descripcion_dia'];
 }
+

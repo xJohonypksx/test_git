@@ -8,68 +8,70 @@ use Illuminate\Http\Request;
 class DiaController extends Controller
 {
     /**
-     * Display a listing of the resource.
+     * Muestra una lista de todos los días.
      */
     public function index()
     {
         $dias = Dia::all();
-        //dd($dias);
-        return view('dia.index',compact("dias"));//
+        return view('dia.index', compact('dias')); // corregido: carpeta y vista en singular
     }
 
     /**
-     * Show the form for creating a new resource.
+     * Muestra el formulario para crear un nuevo día.
      */
     public function create()
     {
-
-        return view('dia.create');
-
+        return view('dia.create'); // corregido: carpeta y vista en singular
     }
 
     /**
-     * Store a newly created resource in storage.
+     * Almacena un nuevo día en la base de datos.
      */
     public function store(Request $request)
     {
         Dia::create([
-            "descripcion_dia"=>$request->descripcion_dia,
-
+            'ID_Persona' => $request->ID_Persona,
         ]);
-        return redirect()->route('dias.index');//
+
+        return redirect()->route('dia.index'); // corregido: nombre de ruta en singular
     }
 
     /**
-     * Display the specified resource.
+     * Muestra un día específico.
      */
-    public function show(Dia $dias)
+    public function show(Dia $dia)
     {
-       return "HOLA DESDE SHOW"; //
+        return view('dia.show', compact('dia')); // corregido: carpeta y vista en singular
     }
 
     /**
-     * Show the form for editing the specified resource.
+     * Muestra el formulario para editar un día existente.
      */
-    public function edit(Dia $dias)
+    public function edit(Dia $dia)
     {
-        return view ('dia.edit',compact("dias"));
+        return view('dia.edit', compact('dia')); // corregido: carpeta y vista en singular
     }
 
     /**
-     * Update the specified resource in storage.
+     * Actualiza un día existente en la base de datos.
      */
-    public function update(Request $request, Dia $dias)
+    public function update(Request $request, Dia $dia)
     {
-        $dias->update($request->all());
-        return redirect()->route('dias.index');
+        $dia->update([
+            'ID_Persona' => $request->ID_Persona,
+        ]);
+
+        return redirect()->route('dia.index'); // corregido: nombre de ruta en singular
     }
 
     /**
-     * Remove the specified resource from storage.
+     * Elimina un día de la base de datos.
      */
-    public function destroy(Dia $dias)
+    public function destroy($id)
     {
-        $dias->delete();
-        return redirect()->route('dias.index');
+        $dia = Dia::findOrFail($id);
+        $dia->delete();
+
+        return redirect()->route('dia.index'); // corregido: nombre de ruta en singular
     }
 }

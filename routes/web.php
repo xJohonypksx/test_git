@@ -69,6 +69,7 @@ Route::resource('proyecciones',App\Http\Controllers\ProyeccionController::class)
 
 
 Route::resource('idiomas',App\Http\Controllers\IdiomaController::class);
+Route::resource('clientes', ClienteController::class);
 
 
 Route::resource('dias',App\Http\Controllers\DiaController::class);
