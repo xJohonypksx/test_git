@@ -38,7 +38,6 @@
                                     <a class="btn btn-primary" href="{{route("horas.edit",$hora->id_hora)}}">Editar</a>
                                 </td>
                             </tr>
-
                         @endforeach
                         </tbody>
                     </table>
