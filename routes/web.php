@@ -61,6 +61,8 @@ Route :: resource('clasificacion', App\Http\Controllers\ClasificacionController:
 
 Route::resource('horas', App\Http\Controllers\HoraController::class);
 
+Route::resource('peliculas', App\Http\Controllers\PeliculaController::class);
+
 
 Route::resource('ciudades', App\Http\Controllers\CiudadController::class);
 
