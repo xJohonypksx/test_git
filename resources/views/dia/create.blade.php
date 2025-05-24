@@ -67,21 +67,19 @@
         }
     </style>
 
-    <div class="center-form-container">
-        <div class="form-box">
-            <h2 class="form-title">Registrar Día</h2>
-            <form class="row g-3" method="post" action="{{ route('dias.store') }}">
-                @csrf
+    <div class="container">
+        <h2>Agregar Nuevo Día 📅</h2>
 
-                <div class="col-12">
-                    <label for="descripcion_dia" class="form-label">Descripción del Día</label>
-                    <input type="text" class="form-control" name="descripcion_dia" id="descripcion_dia" placeholder="Ej. Lunes" required>
-                </div>
+        <form action="{{ route('dias.store') }}" method="POST">
+            @csrf
 
-                <div class="col-12 text-center">
-                    <button type="submit" class="btn btn-tech mt-3 px-4 py-2">Guardar</button>
-                </div>
-            </form>
-        </div>
+            <div class="form-group mb-3">
+                <label for="desc_dia">Descripción del Día</label>
+                <input type="text" name="desc_dia" class="form-control" required>
+            </div>
+
+            <button type="submit" class="btn btn-primary">Guardar</button>
+            <a href="{{ route('dias.index') }}" class="btn btn-secondary">Cancelar</a>
+        </form>
     </div>
 @endsection

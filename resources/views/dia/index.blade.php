@@ -1,6 +1,6 @@
-@extends("layouts.app")
+@extends('layouts.app')
 
-@section("content")
+@section('content')
     <div class="container py-5" style="background: linear-gradient(135deg, #2a2a72, #009ffd);">
         <div class="d-flex justify-content-between align-items-center mb-4">
             <h2 class="text-light">
@@ -16,7 +16,7 @@
                 @if ($dias->count())
                     <div class="table-responsive">
                         <table class="table table-dark table-hover table-bordered align-middle text-center">
-                            <thead class="table-dark">
+                            <thead>
                             <tr>
                                 <th>#️⃣</th>
                                 <th>Descripción del Día 📝</th>
@@ -26,23 +26,20 @@
                             <tbody>
                             @foreach ($dias as $dia)
                                 <tr>
-                                    <td>{{ $loop->iteration }}️⃣</td>
-                                    <td>{{ $dia->descripcion_dia }}</td>
+                                    <td>{{ $dia->id_dia }}</td>
+                                    <td>{{ $dia->desc_dia }}</td> <!-- ESTA LÍNEA ES LA CLAVE -->
                                     <td>
-                                        <a href="{{ route('dias.edit', $dia->id_dia) }}" class="btn btn-outline-info btn-sm rounded-3 me-2">
-                                            <i class="bi bi-pencil-fill"></i> Editar ✏️
-                                        </a>
-                                        <form action="{{ route('dias.destroy', $dia->id_dia) }}" method="POST" class="d-inline">
+                                        <a href="{{ route('dias.edit', $dia->id_dia) }}" class="btn btn-info">Editar</a>
+                                        <form action="{{ route('dias.destroy', $dia->id_dia) }}" method="POST" style="display:inline-block;">
                                             @csrf
                                             @method('DELETE')
-                                            <button type="submit" class="btn btn-outline-danger btn-sm rounded-3" onclick="return confirm('¿Estás seguro de eliminar este día? ❌')">
-                                                <i class="bi bi-trash-fill"></i> Eliminar 🗑️
-                                            </button>
+                                            <button class="btn btn-danger">Eliminar</button>
                                         </form>
                                     </td>
                                 </tr>
                             @endforeach
                             </tbody>
+
                         </table>
                     </div>
                 @else

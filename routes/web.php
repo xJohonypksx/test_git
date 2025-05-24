@@ -55,6 +55,12 @@ Route::get('Christopher', function (){
 });
 
 
+Route:: resource('generos', App\Http\Controllers\GeneroController::class);
+use App\Http\Controllers\DirectorController;
+
+Route::resource('directores', DirectorController::class);
+
+Route::resource('personas', PersonaController::class);
 
 Route :: resource('clasificacion', App\Http\Controllers\ClasificacionController::class);
 
@@ -76,9 +82,9 @@ Route::resource('clientes', ClienteController::class);
 
 Route::resource('dias',App\Http\Controllers\DiaController::class);
 
-
 Auth::routes();
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+
 
 

@@ -7,71 +7,58 @@ use Illuminate\Http\Request;
 
 class DiaController extends Controller
 {
-    /**
-     * Muestra una lista de todos los días.
-     */
     public function index()
     {
         $dias = Dia::all();
-        return view('dia.index', compact('dias')); // corregido: carpeta y vista en singular
+        return view('dia.index', compact('dias'));
     }
 
-    /**
-     * Muestra el formulario para crear un nuevo día.
-     */
     public function create()
     {
-        return view('dia.create'); // corregido: carpeta y vista en singular
+        return view('dia.create');
     }
 
-    /**
-     * Almacena un nuevo día en la base de datos.
-     */
     public function store(Request $request)
     {
-        Dia::create([
-            'ID_Persona' => $request->ID_Persona,
+        $request->validate([
+            'desc_dia' => 'required|string|max:100',
         ]);
 
-        return redirect()->route('dia.index'); // corregido: nombre de ruta en singular
+        Dia::create([
+            'desc_dia' => $request->desc_dia
+        ]);
+
+        return redirect()->route('dias.index')->with('success', 'Día creado exitosamente.');
     }
 
-    /**
-     * Muestra un día específico.
-     */
     public function show(Dia $dia)
     {
-        return view('dia.show', compact('dia')); // corregido: carpeta y vista en singular
+        return view('dia.show', compact('dia'));
     }
 
-    /**
-     * Muestra el formulario para editar un día existente.
-     */
-    public function edit(Dia $dia)
-    {
-        return view('dia.edit', compact('dia')); // corregido: carpeta y vista en singular
-    }
-
-    /**
-     * Actualiza un día existente en la base de datos.
-     */
-    public function update(Request $request, Dia $dia)
-    {
-        $dia->update([
-            'ID_Persona' => $request->ID_Persona,
-        ]);
-
-        return redirect()->route('dia.index'); // corregido: nombre de ruta en singular
-    }
-
-    /**
-     * Elimina un día de la base de datos.
-     */
-    public function destroy($id)
+    public function edit($id)
     {
         $dia = Dia::findOrFail($id);
+        return view('dia.edit', compact('dia'));
+    }
+
+    public function update(Request $request, $id)
+    {
+        $request->validate([
+            'desc_dia' => 'required|string|max:100',
+        ]);
+
+        $dia = Dia::findOrFail($id);
+        $dia->desc_dia = $request->desc_dia;
+        $dia->save();
+
+        return redirect()->route('dias.index')->with('success', 'Día actualizado exitosamente.');
+    }
+
+    public function destroy(Dia $dia)
+    {
         $dia->delete();
 
-        return redirect()->route('dia.index'); // corregido: nombre de ruta en singular
+        return redirect()->route('dias.index')->with('success', 'Día eliminado exitosamente.');
     }
 }
